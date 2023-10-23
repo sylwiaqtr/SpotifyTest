@@ -1,4 +1,4 @@
-package com.spotify.tests;
+package com.spotify.util;
 
 import com.spotify.util.LoadCredentials;
 import io.restassured.RestAssured;

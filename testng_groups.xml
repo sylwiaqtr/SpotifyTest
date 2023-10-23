@@ -1,11 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="SPOTIFY" parallel="tests">
+<suite name="SPOTIFY" parallel="classes">
 <test name="Regression">
-
     <classes>
         <class name="com.spotify.tests.BaseAnnotations"></class>
-        <class name="com.spotify.tests.SpotifyTests"></class>
+        <class name="com.spotify.tests.ArtistTests"></class>
+        <class name="com.spotify.tests.AlbumTests"></class>
+        <class name="com.spotify.tests.GenreTests"></class>
+        <class name="com.spotify.tests.SearchTests"></class>
+        <class name="com.spotify.tests.TrackTests"></class>
     </classes>
 </test>
 </suite>

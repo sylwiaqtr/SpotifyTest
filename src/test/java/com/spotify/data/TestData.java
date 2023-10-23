@@ -1,9 +1,14 @@
-package com.spotify.tests;
+package com.spotify.data;
 
 import org.testng.annotations.DataProvider;
 
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasEntry;
 
 public class TestData {
 
@@ -24,7 +29,7 @@ public class TestData {
         return new Object[][] {
                 {"12Chz98pHFMPJEknJQMWvI", 13, 180},
                 {"4lxfqrEsLX6N1N4OCSkILp", 22, 384},
-                {"5r1bdqzhgRoHC3YcCV6N5a", 11, 148},
+                {"1Mxqyy3pSjf8kZZL4QVxS0", 50, 1225},
                 {"4wo1267SJuUfHgasdlfNfc", 5, 69},
                 {"5NGO30tJxFlKixkPSgXcFE", 9, 129},
                 {"4tZwfgrHOc3mvqYlEYSvVi", 14, 225},
@@ -61,8 +66,8 @@ public class TestData {
         return new Object[][] {
                 {"37i9dQZF1DX9LbdoYID5v7", "The 2000s Indie Scene", 75, 286},
                 {"37i9dQZF1DX9GRpeH4CL0S", "Essential Alternative", 225, 878},
-                {"37i9dQZF1DX98f0uoU1Pcs", "Noisy", 124, 425},
-                {"37i9dQZF1DWZryfp6NSvtz", "All New Rock", 50, 169},
+                {"26ZLzxqLByPBeJBw2oqlrf", "Breaking Bad Soundtrack - All songs - Seasons 1-5", 144, 566},
+                {"1ujsyngc5ZG9MG2MbaxkcQ", " True Detective (Season 1) Soundtrack", 42, 152},
                 {"37i9dQZF1DWXRqgorJj26U", "Rock Classics", 200, 882}
 
         };
@@ -73,6 +78,18 @@ public class TestData {
         return new Object[][]{
                 {"1rprZ0pr6XoRCxcrC3MCL0M"}
         };
+    }
+
+    @DataProvider(name="podcasts")
+    public Object[][] podcasts(){
+        Map<String, String> podcastsInfo = new HashMap<>();
+        podcastsInfo.put("Ja i moje przyjaciółki idiotki", "Tu Okuniewska");
+        podcastsInfo.put("Matka matce", "Joanna Okuniewska");
+        podcastsInfo.put("Tu Okuniewska", "Tu Okuniewska");
+
+        return new Object[][]{
+                {"okuniewska", podcastsInfo}
+    };
     }
 
 

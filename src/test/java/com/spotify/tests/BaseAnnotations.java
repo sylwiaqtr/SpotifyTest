@@ -1,9 +1,7 @@
 package com.spotify.tests;
 
+import com.spotify.util.Authentication;
 import io.restassured.RestAssured;
-import jdk.jshell.spi.ExecutionControl;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
